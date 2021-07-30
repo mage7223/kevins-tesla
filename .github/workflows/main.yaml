@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: ./node_modules/@angular/cli/bin/ng build --prod
+        run: ./node_modules/@angular/cli/bin/ng build
 
       - name: Deploy
         env:
@@ -34,5 +34,5 @@ jobs:
           aws s3 cp \
             --recursive \
             --region us-east-1 \
-            dist/st-elbows-fire/ s3://kjr-static-content/sites/doeskevinhaveateslayet.com/prod/
+            dist/kevins-tesla/ s3://kjr-static-content/sites/doeskevinhaveateslayet.com/prod/
           aws cloudfront create-invalidation --distribution-id E3MSL3SZ4E24V0 --paths "/*"
