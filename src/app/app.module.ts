@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { TeslaAnswerComponent } from './tesla-answer/tesla-answer.component';
 
 @NgModule({
@@ -12,9 +13,14 @@ import { TeslaAnswerComponent } from './tesla-answer/tesla-answer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleTagManagerModule.forRoot({
+      id: 'GTM-TVWZM7Z',
+    })
   ],
-  providers: [],
+  providers: [
+    {provide: 'googleTagManagerId',  useValue: 'GTM-TVWZM7Z'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
