@@ -40,3 +40,4 @@ jobs:
             --region us-east-1 \
             dist/kevins-tesla/ s3://kjr-static-content/sites/doeskevinhaveateslayet.com/prod/
           aws cloudfront create-invalidation --distribution-id E3MSL3SZ4E24V0 --paths "/*"
+
