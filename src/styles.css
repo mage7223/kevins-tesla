@@ -6,3 +6,10 @@ body {
   background-size: contain;
   background-color: black;
 }
+
+@media screen and  (max-width:650px){
+  body {
+    background: url("/assets/images/model-y-hero-400.jpg") no-repeat 50% 50%;
+    background-color: black;
+  }
+}
