@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,7 @@ import { TeslaAnswerComponent } from './tesla-answer/tesla-answer.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     GoogleTagManagerModule.forRoot({
       id: 'GTM-TVWZM7Z',

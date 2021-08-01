@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { QuestionableServiceService } from '../questionable-service.service';
+import { TeslaDetails } from '../tesla-details';
 
 @Component({
   selector: 'app-tesla-answer',
@@ -7,11 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeslaAnswerComponent implements OnInit {
 
-  answer = "No";
+  teslaDetails: TeslaDetails = new TeslaDetails();
 
-  constructor() { }
+
+  constructor(
+    private questionable: QuestionableServiceService
+  ) {
+    this.questionable.getStatus().subscribe(status => this.teslaDetails = status);
+   }
 
   ngOnInit(): void {
+    //this.teslaDetails = this.questionable.getStatus();
   }
 
 }
