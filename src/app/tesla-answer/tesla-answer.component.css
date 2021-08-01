@@ -1,7 +1,10 @@
 .tesla-answer {
-  text-align: center
+  text-align: center;
+  color: white;
+
 }
 
 span.tesla-answer {
   font-size: xx-large;
+  color: red;
 }
