@@ -1,10 +1,17 @@
 .tesla-answer {
   text-align: center;
   color: white;
-
+  height:100%;
+  position: relative;
 }
 
-span.tesla-answer {
+span.tesla-status {
   font-size: xx-large;
   color: red;
+}
+
+span.tesla-details {
+  font-size: smaller;
+  color: white;
+  padding-top:400px
 }
