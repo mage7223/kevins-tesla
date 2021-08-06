@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  baseRest: "https://DoesKevinHaveATeslaYet.com/rest",
+  baseGraphQL: ""
 };

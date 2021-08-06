@@ -1,10 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { TeslaDetails } from './tesla-details';
-import { HttpHeaders } from '@angular/common/http';
-
+import {environment} from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +10,7 @@ import { HttpHeaders } from '@angular/common/http';
 @Injectable()
 export class QuestionableServiceService {
 
-  private path = "https://do.questionable.codes/tesla/";
-
-  private config = {
-
-  };
+  private path = `${environment.baseRest}/tesla/`;
 
   constructor(
     private http: HttpClient
