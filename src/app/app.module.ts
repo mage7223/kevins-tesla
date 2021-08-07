@@ -19,13 +19,12 @@ import { TeslaAnswerComponent } from './tesla-answer/tesla-answer.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    environment.production ?
-      GoogleTagManagerModule.forRoot({
+    GoogleTagManagerModule.forRoot({
         id: environment.gtmID,
-    }): []
+    })
   ],
   providers: [
-    environment.production ? {provide: 'googleTagManagerId',  useValue: environment.gtmID}: []
+    {provide: 'googleTagManagerId',  useValue: environment.gtmID}
   ],
   bootstrap: [AppComponent]
 })
