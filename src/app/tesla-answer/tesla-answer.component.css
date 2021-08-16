@@ -11,8 +11,10 @@ span.tesla-status {
   color: red;
 }
 
-span.tesla-details {
-  font-size: smaller;
-  color: white;
-  padding-top:400px
+div.tesla-details {
+  font-family: cursive;
+  font-size: medium;
+  color: cornflowerblue;
+  white-space: pre-wrap;
+
 }
