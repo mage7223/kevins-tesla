@@ -1,5 +1,7 @@
 <div class="tesla-answer">
   <h2>Does Kevin have a Tesla yet?</h2>
   <span class="tesla-status" id="tesla-status">{{teslaDetails.status}}</span>
-  <br/><div class="tesla-details">{{teslaDetails.details}}</div>
+  <br/><div *ngFor="let detail of teslaDetails.details" class="tesla-details">
+    {{detail}}
+  </div>
 </div>
