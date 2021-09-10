@@ -11,7 +11,7 @@ import { TeslaDetails } from '../tesla-details';
 export class TeslaAnswerComponent implements OnInit {
 
   teslaDetails: TeslaDetails = new TeslaDetails();
-  refreshIntervalMinutes: number = 1;
+  refreshIntervalMinutes: number = 10;
   refreshInterval: any = null;
 
 
