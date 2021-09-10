@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { QuestionableServiceService } from '../questionable-service.service';
 import { TeslaDetails } from '../tesla-details';
 
