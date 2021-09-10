@@ -11,16 +11,22 @@ import { TeslaDetails } from '../tesla-details';
 export class TeslaAnswerComponent implements OnInit {
 
   teslaDetails: TeslaDetails = new TeslaDetails();
+  refreshIntervalMinutes: number = 1;
+  refreshInterval: any = null;
 
 
   constructor(
     private questionable: QuestionableServiceService
   ) {
-    this.questionable.getStatus().subscribe(status => this.teslaDetails = status);
    }
 
   ngOnInit(): void {
-    //this.teslaDetails = this.questionable.getStatus();
+    this.refreshStatus(this.questionable);
+    this.refreshInterval = setInterval(this.refreshStatus, 1000 * 60 * this.refreshIntervalMinutes, this.questionable);
+  }
+
+  refreshStatus(service: QuestionableServiceService) {
+    service.getStatus().subscribe(status => this.teslaDetails = status);
   }
 
 }
